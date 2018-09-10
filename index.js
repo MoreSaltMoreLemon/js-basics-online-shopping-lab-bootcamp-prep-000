@@ -16,7 +16,19 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  // write your code here
+  let itemsInCart = "In your cart, you have ";
+  if (cart.length == 0) {
+    return "Your shopping cart is empty.";
+  }
+  for (let item in cart) {
+    itemsInCart = itemsInCart + " " + cart[item];
+    if (item == cart.length -1) {
+      itemsInCart = itemsInCart + ".";
+    } else {
+      itemsInCart = itemsInCart + ", ";
+    }
+  }
+  return itemsInCart;
 }
 
 function total() {
