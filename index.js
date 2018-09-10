@@ -22,8 +22,11 @@ function viewCart() {
   }
   for (let item in cart) {
     let itemInCart = cart[item].itemName + " at $" + cart[item].itemPrice;
-    if (item == cart.length -1) {
+    if (item == cart.length - 1 && cart.length > 1) {
       itemsInCart = itemsInCart + " and " + itemInCart + ".";
+    } else if(item == cart.length - 1) {
+      itemsInCart = itemsInCart + " " + itemInCart + ".";
+    }
     } else {
       itemsInCart = itemsInCart + " " + itemInCart + ",";
     }
