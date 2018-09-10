@@ -42,7 +42,10 @@ function total() {
 }
 
 function removeFromCart(item) {
-  cart.findIndex((element) => { element.itemName == item; });
+  let index = cart.findIndex((element) => { if(element.itemName === item) return true; });
+  if (index != -1) {
+    return cart.splice(index)
+  }
 }
 
 function placeOrder(cardNumber) {
