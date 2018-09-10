@@ -42,7 +42,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  cart.findIndex()
+  cart.findIndex(element)
 }
 
 function placeOrder(cardNumber) {
