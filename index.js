@@ -21,7 +21,7 @@ function viewCart() {
     return "Your shopping cart is empty.";
   }
   for (let item in cart) {
-    let item = cart[item].itemName + " at $" + cart[item].itemPrice;
+    let itemInCart = cart[item].itemName + " at $" + cart[item].itemPrice;
     if (item == cart.length -1) {
       itemsInCart = itemsInCart + " " + item + ".";
     } else {
