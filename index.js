@@ -23,9 +23,9 @@ function viewCart() {
   for (let item in cart) {
     let itemInCart = cart[item].itemName + " at $" + cart[item].itemPrice;
     if (item == cart.length -1) {
-      itemsInCart = itemsInCart + " " + itemInCart + ".";
+      itemsInCart = itemsInCart + " and " + itemInCart + ".";
     } else {
-      itemsInCart = itemsInCart + " " + itemInCart + ", and";
+      itemsInCart = itemsInCart + " " + itemInCart + ",";
     }
   }
   return itemsInCart;
