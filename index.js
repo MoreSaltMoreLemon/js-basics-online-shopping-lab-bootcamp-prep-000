@@ -51,11 +51,11 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  if (cardNumber === "" || null || undefined || NaN) {
+  if (cardNumber == "" || null || undefined || NaN) {
     return "Sorry, we don't have a credit card on file for you.";
   } else {
     let totalCart = total();
     cart = [];
-    return "Your total cost is $" + totalCart + " which will be charged to the card " + cardNumber + " .";
+    return "Your total cost is $" + totalCart + " which will be charged to the card " + cardNumber + ".";
   }
 }
