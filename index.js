@@ -21,11 +21,11 @@ function viewCart() {
     return "Your shopping cart is empty.";
   }
   for (let item in cart) {
-    itemsInCart = itemsInCart + " " + cart[item].itemName + " at $" + cart[item].itemPrice;
-    if (item == cart.length -1) {
-      itemsInCart = itemsInCart + ".";
+    let item = cart[item].itemName + " at $" + cart[item].itemPrice;
+    if (item == cart.length -1 && item > 0) {
+      itemsInCart = itemsInCart + " " + item + ".";
     } else {
-      itemsInCart = itemsInCart + ",";
+      itemsInCart = itemsInCart + " " + item + ", and";
     }
   }
   return itemsInCart;
