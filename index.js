@@ -44,7 +44,7 @@ function total() {
 function removeFromCart(item) {
   let index = cart.findIndex((element) => { if(element.itemName === item) return true; });
   if (index != -1) {
-    return cart.splice(index, 1)
+    return cart.splice(index, 1);
   }
 }
 
